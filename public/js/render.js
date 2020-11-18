@@ -2,6 +2,7 @@
 // allow some attributes
 
 var filterXSS = require('xss')
+import { allowCSSRendering } from './lib/config'
 
 var whiteListAttr = ['id', 'class', 'style']
 window.whiteListAttr = whiteListAttr
@@ -16,7 +17,7 @@ whiteList['ol'] = ['start']
 // allow li specify value number
 whiteList['li'] = ['value']
 // allow style tag
-whiteList['style'] = []
+if (allowCSSRendering) whiteList['style'] = []
 // allow kbd tag
 whiteList['kbd'] = []
 // allow ifram tag with some safe attributes

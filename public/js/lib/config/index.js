@@ -3,6 +3,7 @@ export const DROPBOX_APP_KEY = window.DROPBOX_APP_KEY || ''
 export const domain = window.domain || '' // domain name
 export const urlpath = window.urlpath || '' // sub url path, like: www.example.com/<urlpath>
 export const debug = window.debug || false
+export const allowCSSRendering = window.allowCSSRendering || false;
 
 export const port = window.location.port
 export const serverurl = `${window.location.protocol}//${domain || window.location.hostname}${port ? ':' + port : ''}${urlpath ? '/' + urlpath : ''}`
